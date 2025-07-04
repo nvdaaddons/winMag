@@ -2,15 +2,14 @@
 
 * Autor: Cyrille Bougot
 * NVDA compatibility: 2019.2.1 and beyond
-* [Stabile Version herunterladen][1]
 
 Diese Erweiterung verbessert die Verwendung von Windows-Lupe mit NVDA.
 
 
 ## Features
 
-* Ermöglicht es, das Ergebnis einiger nativer Tastaturbefehle der Lupe
-  anzusagen.
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * Ermöglicht die Reduzierung der Fälle, in denen die Befehle für die
   Tabellen-Navigation mit den Befehlen der Lupe in Konflikt stehen.
 * Fügt einige Tastenkombinationen zum Umschalten verschiedener Optionen der
@@ -111,6 +110,8 @@ Das Panel enthält die folgenden Optionen:
 * Das Befehlsfenster der Lupe immer im Vordergrund halten: Wenn diese Option
   nicht aktiviert ist, wird das Steuerungsfenster der Lupe nicht immer über
   anderen Fenstern angezeigt.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## Befehle
 
@@ -168,8 +169,9 @@ löschen. Sie können die Tastenkombination der Unterbefehle jedoch nicht
 
 ## Befehle für die Windows-Lupe
 
-Das Ergebnis der folgenden nativen Lupenbefehle kann von dieser Erweiterung
-entsprechend dessen Konfiguration angesagt werden:
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Windows-Lupe starten: Windows+Plus-Taste
 * Windows-Lupe beenden: Windows+Escape-Taste
@@ -188,6 +190,8 @@ entsprechend dessen Konfiguration angesagt werden:
   in neueren Windows-Versionen wie Windows 10 Version 2004 zurückgekehrt zu
   sein.
 * Verschieben Sie die vergrößerte Ansicht: Strg+Alt+Pfeiltasten
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 Es gibt auch eine Liste weitere nativer Befehle der Lupe, nur zur
 Information:
@@ -242,6 +246,26 @@ Keiner der Tastenkombinationen für die Windows-Lupe können geändert werden.
 
 
 ## Änderungen
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Version 3.5
 
@@ -324,8 +348,6 @@ Keiner der Tastenkombinationen für die Windows-Lupe können geändert werden.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/en-us/help/13810
@@ -340,3 +362,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

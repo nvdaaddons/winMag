@@ -2,15 +2,14 @@
 
 * Yazar: Cyrille Bougot
 * NVDA uyumluluğu: 2019.2.1 ve sonrası
-* [kararlı sürümü][1] indir
 
 Bu eklenti, Windows Büyüteç'in NVDA ile kullanımını geliştirir.
 
 
 ## Özellikler
 
-* Bazı Varsayılan Büyüteç klavye komutlarının sonucunu bildirmeye izin
-  verir.
+* Bazı dahili Büyüteç ve renk filtreleme klavye komutlarının sonucunu
+  duyurmaya izin verir.
 * Tablo gezinme komutlarının Büyüteç komutlarıyla çakıştığı durumları
   azaltmayı amaçlar.
 * Büyüteç'in çeşitli yerel seçeneklerini değiştirmek için bazı klavye
@@ -97,6 +96,8 @@ Panel aşağıdaki seçenekleri içerir:
 * Windows Büyüteç komut penceresini her zaman üstte tut: İşaretlenmezse,
   Büyüteç'in kontrol penceresi her zaman diğer pencerelerin üstünde
   tutulmaz.
+* Renk filtresini raporla İşaretlenirse, `Windows+Control+C` geçiş komutunu
+  kullandığınızda kullanılan renk filtresi bildirilir.
 
 ## Bu eklenti tarafından eklenen komutlar
 
@@ -148,8 +149,8 @@ alt komutlarının kısayol tuşlarını değiştiremezsiniz.
 
 ## Büyüteç'in Varsayılan komutları
 
-Aşağıdaki Büyüteç Varsayılan komutlarının sonucu, yapılandırmasına göre bu
-eklenti tarafından bildirilebilir:
+Aşağıdaki Büyüteç yerel komutlarının veya diğer Erişilebilirlik komutlarının
+sonucu, yapılandırmasına göre bu eklenti tarafından bildirilebilir:
 
 * Büyüteç'i Başlat: Windows++ (alfa sayısal klavyede veya sayısal tuş
   takımında)
@@ -165,6 +166,9 @@ eklenti tarafından bildirilebilir:
   Ok. Not: Bu belgelenmiş gibi görünmese de, bu kısayol, Windows 2004 gibi
   son Windows sürümlerinde geri çekilmiş gibi görünüyor.
 * Büyütülmüş görünümü taşıma: Control+Alt+Oklar
+* Renk filtrelerini değiştir: `Windows+Control+C` (bu kısayolu [Windows
+  Erişilebilirlik ayarları, Renk Filtreleri][9] etkinleştirmiş olmanız
+  şartıyla)
 
 Burada ayrıca yalnızca bilgi için diğer Büyüteç varsayılan komutlarının bir
 listesi bulunmaktadır:
@@ -216,6 +220,26 @@ Büyüteç Varsayılankomutlarının hiçbiri değiştirilemez.
 
 
 ## Sürüm Geçmişi
+
+### Sürüm 4.2
+
+* Büyüteç veya Renk filtreleme komutları, bu eklenti çalışırken ilk kez
+  kullanılırsa artık başarısız olmayacaktır.
+
+### Sürüm 4.0
+
+* Renk filtresini değiştir komutu (`Windows+Control+C`) tarafından
+  etkinleştirilen filtre artık duyurulabilir; bu değiştirme komutunun daha
+  önce Windows Erişilebilirlik ayarlarında etkinleştirilmiş olması gerekir.
+* NVDA 2025.1 ile uyumluluk.
+
+### Sürüm 3.7
+
+* NVDA 2024.1 ile uyumluluk.
+
+### Sürüm 3.6
+
+* Hatalı uyumluluk aralığı düzeltildi.
 
 ### Sürüm 3.5
 
@@ -293,8 +317,6 @@ Büyüteç Varsayılankomutlarının hiçbiri değiştirilemez.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/en-us/help/13810
@@ -309,3 +331,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/tr-tr/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

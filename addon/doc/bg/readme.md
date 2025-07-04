@@ -2,15 +2,14 @@
 
 * Автор: Cyrille Bougot
 * Съвместимост с NVDA: от 2019.2.1 и по-нови
-* Изтегляне на [стабилна версия][1]
 
 Тази добавка подобрява използването на лупата на Windows с NVDA.
 
 
 ## Възможности
 
-* Позволява докладването на резултата от задействането на някои вградени
-  клавиатурни команди на лупата.
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * Позволява намаляването на случаите, в които командите за навигация в
   таблици влизат в противоречие с командите на лупата.
 * Добавя някои клавишни комбинации за превключване на разни вградени опции
@@ -103,6 +102,8 @@ Windows.
 * Дръж командния прозорец на лупата на Windows винаги отгоре: Ако не е
   отметнато, контролният прозорец на лупата няма да стои над другите
   прозорци.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## Команди, добавени от тази добавка
 
@@ -162,8 +163,9 @@ Windows.
 
 ## Вградени команди на лупата
 
-Резултатът от следните вградени команди на лупата може да се озвучава от
-добавката:
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Стартиране на лупата: Windows+Плюс (от буквено-цифрения блок или от
   цифровия блок)
@@ -180,6 +182,8 @@ Windows.
   документирано, тези команди изглежда са премахнати в последните издания на
   Windows (например Windows 10 версия 2004).
 * Преместване на увеличения изглед: Control+Alt+Стрелките
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 Ето списък с други вградени команди на лупата, само за информация:
 
@@ -234,6 +238,26 @@ Windows.
 
 
 ## Списък с промените
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Версия 3.5
 
@@ -316,8 +340,6 @@ Windows.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/bg-bg/help/13810
@@ -332,3 +354,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

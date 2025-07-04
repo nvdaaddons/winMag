@@ -2,15 +2,14 @@
 
 * Autor: Cyrille Bougot
 * NVDA compatibility: 2019.2.1 and beyond
-* Descarregar a [Versão estável][1]
 
 Este extra melhora a utilização da Lupa do Windows com NVDA.
 
 
 ## Funcionalidades
 
-* Permite anunciar o resultado de alguns comandos de teclado nativos da
-  Lupa.
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * Permite reduzir os casos em que os comandos de navegação em tabelas entram
   em conflito com os comandos da Lupa...
 * Adds some keyboard shortcuts to toggle various native options of the
@@ -93,6 +92,8 @@ O painel contém as seguintes opções:
 * Keep Windows Magnifier command window always on top: If unchecked, the
   Magnifier's control window will not be kept always on top of other
   windows.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## Comandos adicionados por este extra:
 
@@ -144,8 +145,9 @@ atalho dos sub-comandos da camada da Lupa.
 
 ## Comandos nativos da Lupa do Windows
 
-O resultado dos seguintes comandos nativos da Lupa pode ser anunciado por
-este extra, dependendo das suas configurações:
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Início da Lupa: Windows++ (no teclado alfanumérico ou no numérico)
 * Sair da lupa: Windows+Escape
@@ -160,6 +162,8 @@ este extra, dependendo das suas configurações:
   although this does not seem to be documented, this shortcut seems to have
   been withdrawn in recent Windows versions such as Windows 10 2004.
 * Move the magnified view: Control+Alt+Arrows
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 Eis uma lista de outros comandos nativos da Lupa, apenas para informação:
 
@@ -209,6 +213,26 @@ Nenhum dos comandos nativos da Lupa pode ser modificado.
 
 
 ## Registro de Alterações
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Version 3.5
 
@@ -287,8 +311,6 @@ Nenhum dos comandos nativos da Lupa pode ser modificado.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/pt-pt/help/13810
@@ -303,3 +325,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

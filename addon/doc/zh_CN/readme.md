@@ -2,14 +2,14 @@
 
 * 作者: Cyrille Bougot
 * NVDA compatibility: 2019.2.1 and beyond
-* 下载 [稳定版][1]
 
 此插件增强了 NVDA 使用 Windows 放大镜时的体验。
 
 
 ## 功能
 
-* 允许读出某些放大镜原有快捷键的结果。
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * 允许减少表格导航快捷键与放大镜快捷键的冲突。
 * Adds some keyboard shortcuts to toggle various native options of the
   Magnifier.
@@ -74,6 +74,8 @@ The keyboard shortcut NVDA+Windows+O then O also allows to open this settings pa
 * Keep Windows Magnifier command window always on top: If unchecked, the
   Magnifier's control window will not be kept always on top of other
   windows.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## 此插件添加的命令
 
@@ -119,7 +121,9 @@ command NVDA+Windows+O:
 
 ## 放大镜的原有快捷键
 
-根据您的设置，此插件会朗读以下放大镜原有快捷键按下时的状态信息：
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Windows 徽标键  + 加号 (+)：打开放大镜
 * Windows 徽标键  + Esc：关闭放大镜
@@ -134,6 +138,8 @@ command NVDA+Windows+O:
   although this does not seem to be documented, this shortcut seems to have
   been withdrawn in recent Windows versions such as Windows 10 2004.
 * Move the magnified view: Control+Alt+Arrows
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 下面是其他放大镜原有快捷键的列表，仅供参考：
 
@@ -172,6 +178,26 @@ command NVDA+Windows+O:
 
 
 ## 更新日志
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Version 3.5
 
@@ -250,8 +276,6 @@ command NVDA+Windows+O:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/zh-cn/help/13810
@@ -266,3 +290,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

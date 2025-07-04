@@ -2,15 +2,14 @@
 
 * Forfatter: Cyrille Bougot
 * NVDA compatibility: 2019.2.1 and beyond
-* Download [stabil version][1]
 
 Denne tilføjelse forbedrer brugen af Windows Forstørrelsesglas med NVDA.
 
 
 ## Funktioner
 
-* Giver mulighed for at få oplyst hvad der sker, når du bruger en kommando
-  for Windows Forstørrelsesglas
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * Gør det muligt at reducere de tilfælde, hvor tabelnavigationskommandoer er
   i konflikt med forstørrelses kommandoer.
 * Tilføjer nogle tastaturgenveje, der ændre forskellige
@@ -96,6 +95,8 @@ Panelet indeholder følgende indstillinger:
 * Keep Windows Magnifier command window always on top: If unchecked, the
   Magnifier's control window will not be kept always on top of other
   windows.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## Kommandoer udbudt af denne tilføjelse
 
@@ -147,8 +148,9 @@ forstørrelseslaget.
 
 ## Oprindelige kommandoer tildelt af Windows til Forstørrelsesglas
 
-Resultatet af følgende indbyggede kommandoer til forstørrelsesglas kan
-rapporteres af denne tilføjelse i henhold til dens konfiguration:
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Start Forstørrelsesglas: Windows++ (på alfanumerisk tastatur eller på
   numpad)
@@ -164,6 +166,8 @@ rapporteres af denne tilføjelse i henhold til dens konfiguration:
   skønt dette ikke ser ud til at være dokumenteret, synes denne genvej at
   være trukket tilbage i de nyeste Windows-versioner som Windows 10 2004.
 * Panorer den forstørrede visning: Ctrl+Alt+piletasterne
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 Yderligere er disse indbyggede kommandoer til rådighed:
 
@@ -213,6 +217,26 @@ Ingen af de indbyggede kommandoer til Forstørrelsesglas kan ændres.
 
 
 ## Ændringshistorik
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Version 3.5
 
@@ -294,8 +318,6 @@ Ingen af de indbyggede kommandoer til Forstørrelsesglas kan ændres.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://shorturl.at/dezBK
@@ -310,3 +332,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

@@ -2,15 +2,14 @@
 
 * Autor: Cyrille Bougot
 * NVDA kompatibilnost: 2019.2.1 i novije verzije
-* Preuzmi [stabilnu verziju][1]
 
 Ovaj dodatak poboljšava upotrebu Windows povećala s NVDA čitačem.
 
 
 ## Funkcije
 
-* Dozvoljava izvještavanje o rezultatu nekih izvornih tipkovničkih naredbi
-  povećala.
+* Allows to report the result of some native Magnifier and color filtering
+  keyboard commands.
 * Dozvoljava smanjivanje broja slučajeva, gdje se naredbe za kretanje po
   tablici sukobljavaju s naredbama povećala.
 * Dodaje neke tipkovničke prečace za uključivanje i isključivanje raznih
@@ -95,6 +94,8 @@ Ploča sadrži sljedeće opcije:
 * Keep Windows Magnifier command window always on top: If unchecked, the
   Magnifier's control window will not be kept always on top of other
   windows.
+* Report color filter If checked, the used color filter is reported when you
+  use the `Windows+Control+C` toggle command.
 
 ## Dodatak dodaje sljedeće naredbe
 
@@ -144,8 +145,9 @@ povećala.
 
 ## Izvorne naredbe povećala
 
-S ovim se dodatkom rezultat sljedećih izvornih naredbi povećala izgovara,
-ovisno o konfiguraciji:
+The result of the following Magnifier native commands, or other
+Accessibility commands, may be reported by this add-on, according to its
+configuration:
 
 * Pokreni povećalo: Windows++ (na alfanumeričkoj tipkovnici ili na
   numeričkoj tipkovnici)
@@ -164,6 +166,8 @@ ovisno o konfiguraciji:
   je ovaj prečac povučen u novijim verzijama Windows sustava kao što je
   Windows 10 2004.
 * Pomakni uvećani prikaz: Kontrol+Alt+strelice
+* Toggle color filters: `Windows+Control+C` (provided you have enabled this
+  shortcut in [Windows Accessibility settings, Color Filters][9])
 
 Za kraj, evo popis ostalih izvornih naredbi povećala, čisto informativno:
 
@@ -211,6 +215,26 @@ Nije moguće promijeniti niti jednu izvornu naredbu povećala.
 
 
 ## Dnevnik promjena
+
+### Version 4.2
+
+* Magnifier or Color filtering commands will no longer fail if used for the
+  first time with this add-on running.
+
+### Version 4.0
+
+* The filter enabled by the toggle color filter command
+  (`Windows+Control+C`) can now be reported; this toggle command should have
+  been previously enabled in Windows Accessibility settings.
+* Compatibility with NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibility with NVDA 2024.1.
+
+### Version 3.6
+
+* Fixed erroneous compatibility range.
 
 ### Verzija 3.5
 
@@ -290,8 +314,6 @@ Nije moguće promijeniti niti jednu izvornu naredbu povećala.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: https://support.microsoft.com/hr-hr/help/13810
@@ -306,3 +328,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

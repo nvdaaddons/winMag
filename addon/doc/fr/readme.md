@@ -2,7 +2,6 @@
 
 * Auteur: Cyrille Bougot
 * Compatibilité NVDA : 2019.2.1 et supérieure
-* Télécharger [version stable][1]
 
 Cette extension améliore l'utilisation de la loupe Windows avec NVDA.
 
@@ -10,7 +9,7 @@ Cette extension améliore l'utilisation de la loupe Windows avec NVDA.
 ## Fonctionnalités
 
 * Permet d'annoncer le résultat de certaines commandes clavier natives de la
-  Loupe.
+  Loupe et des filtres de couleur.
 * Permet de réduire les cas où les commandes de navigation dans les tableaux
   entre en conflit avec les commandes de la loupe.
 * Ajout de raccourcis clavier pour basculer entre diverses options natives
@@ -106,6 +105,9 @@ Le panneau contient les options suivantes :
 * Conserver la fenêtre de commande de la loupe Windows toujours au dessus :
   si cette case n'est pas cochée, la fenêtre de commande de la loupe ne sera
   pas toujours gardée au-dessus des autres fenêtres.
+* Annoncer le filtre de couleur : si cette option est cochée, le filtre de
+  couleur est annoncé lorsque vous utilisez la commande d'activation /
+  désactivation `Windows+Contrôle+C`.
 
 ## Commandes ajoutées par cette extension
 
@@ -162,8 +164,9 @@ modifier les touches de raccourci des sous-commandes de la Loupe.
 
 ## Commandes natives de la Loupe
 
-Le résultat des commandes suivantes de la Loupe peut être annoncé par cette
-extension, selon sa configuration :
+Le résultat des commandes suivantes de la Loupe, ou d'autres commandes
+d'accessibilité, peut être annoncé par cette extension, selon sa
+configuration :
 
 * Démarrer la loupe: Windows++ (sur le clavier alphanumérique ou sur le pavé
   numérique)
@@ -182,6 +185,9 @@ extension, selon sa configuration :
   avoir été supprimé dans les versions récentes de Windows telles que
   Windows 10 2004.
 * Déplacer la vue agrandie : Ctrl+Alt+Flèches
+* Activer / désactiver les filtres de couleur : `Windows+Contrôle+C` (à
+  condition d’avoir activé ce raccourci dans les [paramètres d’accessibilité
+  de Windows, Filtre de couleurs][9])
 
 Voici également une liste d'autres commandes natives de la Loupe, juste à
 titre informatif:
@@ -237,6 +243,28 @@ Aucune des commandes natives de la Loupe ne peut être modifiée.
 
 
 ## Journal des modifications
+
+### Version 4.2
+
+* Les commandes de la Loupe ou des filtres de couleur n'échoueront plus
+  lorsqu'elles sont utilisées pour la première fois avec cet extension en
+  cours d’exécution.
+
+### Version 4.0
+
+* Le filtre activé par la commande d'activation / désactivation des filtres
+  de couleur (`Windows+Contrôle+C`) peut désormais être annoncé ; cette
+  commande doit avoir été préalablement activée dans les paramètres
+  d’accessibilité de Windows.
+* Compatibilité avec NVDA 2025.1.
+
+### Version 3.7
+
+* Compatibilité avec NVDA 2024.1.
+
+### Version 3.6
+
+* Correction de la plage de compatibilité erronée.
 
 ### Version 3.5
 
@@ -321,8 +349,6 @@ Aucune des commandes natives de la Loupe ne peut être modifiée.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=winmag
-
 [3]: https://github.com/CyrilleB79/winMag
 
 [4]: Raccourcis clavier d'accessibilité dans Windows
@@ -337,3 +363,6 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 
 [8]:
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
+
+[9]:
+https://support.microsoft.com/fr-fr/windows/voir-plus-facilement-windows-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d
