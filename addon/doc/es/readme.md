@@ -8,8 +8,8 @@ Este complemento mejora el uso de la lupa de Windows con NVDA.
 
 ## Características
 
-* Allows to report the result of some native Magnifier and color filtering
-  keyboard commands.
+* Permite indicar el resultado de algunas órdenes de teclado nativas de la
+  lupa y el filtro de color.
 * Permite reducir los casos en los que las órdenes de navegación por tablas
   interfieren con las órdenes de la lupa.
 * Añade varios atajos de teclado para conmutar ciertas opciones nativas de
@@ -95,8 +95,8 @@ El panel contiene las siguientes opciones:
 * Mantener ventana de control de la lupa siempre visible: si se desmarca, la
   ventana de control de la lupa no permanecerá siempre por encima de otras
   ventanas.
-* Report color filter If checked, the used color filter is reported when you
-  use the `Windows+Control+C` toggle command.
+* Anunciar filtro de color: si se marca, se anuncia el estado del filtro de
+  color usado al pulsar la orden de conmutación `Windows+Control+C`.
 
 ## Órdenes que añade este complemento
 
@@ -149,9 +149,9 @@ no se pueden modificar las subórdenes de esta capa.
 
 ## Órdenes nativas de la lupa
 
-The result of the following Magnifier native commands, or other
-Accessibility commands, may be reported by this add-on, according to its
-configuration:
+Este complemento puede verbalizar el resultado de las siguientes órdenes
+nativas de la lupa, u otras órdenes de accesibilidad, en función de su
+configuración:
 
 * Iniciar lupa: windows+más (alfanumérico o del teclado numérico).
 * Salir de la lupa: windows+escape
@@ -167,8 +167,9 @@ configuration:
   que se ha retirado este atajo en versiones recientes de Windows, como
   Windows 10 2004.
 * Mover la vista ampliada: control+alt+flechas
-* Toggle color filters: `Windows+Control+C` (provided you have enabled this
-  shortcut in [Windows Accessibility settings, Color Filters][9])
+* Conmutar filtros de color: `Windows+Control+C` (siempre que se haya
+  activado este atajo desde las [opciones de accesibilidad de Windows,
+  Filtros de color][9])
 
 Aquí se encuentra una lista con más órdenes nativas de la lupa, para más
 información:
@@ -222,25 +223,25 @@ Ninguna de las órdenes nativas de la lupa se puede modificar.
 
 ## Registro de cambios
 
-### Version 4.2
+### Versión 4.2
 
-* Magnifier or Color filtering commands will no longer fail if used for the
-  first time with this add-on running.
+* Las órdenes de la lupa o el filtro de color ya no fallarán al usarse por
+  primera vez con este complemento en ejecución.
 
-### Version 4.0
+### Versión 4.0
 
-* The filter enabled by the toggle color filter command
-  (`Windows+Control+C`) can now be reported; this toggle command should have
-  been previously enabled in Windows Accessibility settings.
-* Compatibility with NVDA 2025.1.
+* Ahora se puede anunciar el filtro activado por la orden de conmutación del
+  filtro de color (`Windows+Control+C`); esta orden de conmutación debería
+  haberse activado previamente en las opciones de accesibilidad de Windows.
+* Compatibilidad con NVDA 2025.1.
 
-### Version 3.7
+### Versión 3.7
 
-* Compatibility with NVDA 2024.1.
+* Compatibilidad con NVDA 2024.1.
 
-### Version 3.6
+### Versión 3.6
 
-* Fixed erroneous compatibility range.
+* Se corrige un rango de compatibilidad erróneo.
 
 ### Versión 3.5
 
@@ -338,4 +339,4 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
 
 [9]:
-https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d
+https://support.microsoft.com/es-es/windows/mejorar-la-visualizaci%C3%B3n-de-windows-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d

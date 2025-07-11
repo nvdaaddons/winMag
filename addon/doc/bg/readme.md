@@ -8,8 +8,8 @@
 
 ## Възможности
 
-* Allows to report the result of some native Magnifier and color filtering
-  keyboard commands.
+* Позволява докладването на резултата от задействането на някои вградени
+  клавиатурни команди на лупата и на филтрите за цветове.
 * Позволява намаляването на случаите, в които командите за навигация в
   таблици влизат в противоречие с командите на лупата.
 * Добавя някои клавишни комбинации за превключване на разни вградени опции
@@ -102,8 +102,9 @@ Windows.
 * Дръж командния прозорец на лупата на Windows винаги отгоре: Ако не е
   отметнато, контролният прозорец на лупата няма да стои над другите
   прозорци.
-* Report color filter If checked, the used color filter is reported when you
-  use the `Windows+Control+C` toggle command.
+* Докладвай филтрите за цветове: Ако е отметнато, Използваният филтър за
+  цветове се докладва, когато използвате командата за превключване
+  `Windows+Control+C`.
 
 ## Команди, добавени от тази добавка
 
@@ -163,9 +164,9 @@ Windows.
 
 ## Вградени команди на лупата
 
-The result of the following Magnifier native commands, or other
-Accessibility commands, may be reported by this add-on, according to its
-configuration:
+Резултатът от следните вградени команди на лупата, или други команди за
+достъпност, може да се докладват от добавката, в зависимост от нейните
+настройки:
 
 * Стартиране на лупата: Windows+Плюс (от буквено-цифрения блок или от
   цифровия блок)
@@ -182,8 +183,9 @@ configuration:
   документирано, тези команди изглежда са премахнати в последните издания на
   Windows (например Windows 10 версия 2004).
 * Преместване на увеличения изглед: Control+Alt+Стрелките
-* Toggle color filters: `Windows+Control+C` (provided you have enabled this
-  shortcut in [Windows Accessibility settings, Color Filters][9])
+* Превключване на филтрите за цветове: `Windows+Control+C` (при условие че
+  сте включили този пряк път в [Настройки на Windows -> Достъпност -> Филтри
+  за цвят][9])
 
 Ето списък с други вградени команди на лупата, само за информация:
 
@@ -239,25 +241,26 @@ configuration:
 
 ## Списък с промените
 
-### Version 4.2
+### Версия 4.2
 
-* Magnifier or Color filtering commands will no longer fail if used for the
-  first time with this add-on running.
+* Командите за лупата или филтрите за цветове вече няма да се провалят, ако
+  се използват за първи път, докато тази добавка е включена.
 
-### Version 4.0
+### Версия 4.0
 
-* The filter enabled by the toggle color filter command
-  (`Windows+Control+C`) can now be reported; this toggle command should have
-  been previously enabled in Windows Accessibility settings.
-* Compatibility with NVDA 2025.1.
+* Филтърът, задействан от командата за превключване на филтрите за цветове
+  (`Windows+Control+C`), вече може да бъде докладван. Тази команда за
+  превключване трябва да бъде предварително включена в настройките за
+  достъпност на Windows.
+* Съвместимост с NVDA 2025.1.
 
-### Version 3.7
+### Версия 3.7
 
-* Compatibility with NVDA 2024.1.
+* Съвместимост с NVDA 2024.1.
 
-### Version 3.6
+### Версия 3.6
 
-* Fixed erroneous compatibility range.
+* Поправен е грешен диапазон на съвместимост.
 
 ### Версия 3.5
 

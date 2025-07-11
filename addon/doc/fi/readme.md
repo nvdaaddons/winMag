@@ -8,8 +8,8 @@ Tämä lisäosa parantaa Windowsin suurennuslasin käytettävyyttä NVDA:n kanss
 
 ## Ominaisuudet
 
-* Allows to report the result of some native Magnifier and color filtering
-  keyboard commands.
+* Mahdollistaa joidenkin alkuperäisten suurennuslasi- ja
+  värisuodatusnäppäinkomentojen tulosten ilmoittamisen.
 * Vähentää tapauksia, joissa taulukkonavigointikomennot ovat ristiriidassa
   suurennuslasikomentojen kanssa.
 * Lisätty joitakin pikanäppäimiä suurennuslasin useiden alkuperäisten
@@ -96,8 +96,8 @@ Tämä asetus ei vaikuta kiinnitetyn näkymän tilaan.
 * Pidä Windowsin suurennuslasin komentoikkuna aina päällimmäisenä: Jos tämä
   ei ole valittuna, suurennuslasin säädinikkunaa ei pidetä aina muiden
   ikkunoiden päällä.
-* Report color filter If checked, the used color filter is reported when you
-  use the `Windows+Control+C` toggle command.
+* Ilmoita värisuodatin: Jos tämä on valittuna, käytössä oleva värisuodatin
+  ilmoitetaan käyttäessäsi tilanvaihtokomentoa `Win+Ctrl+C`.
 
 ## Lisäosan komennot
 
@@ -155,9 +155,9 @@ muuttaminen ei kuitenkaan ole mahdollista.
 
 ## Alkuperäiset suurennuslasikomennot
 
-The result of the following Magnifier native commands, or other
-Accessibility commands, may be reported by this add-on, according to its
-configuration:
+Asetuksista riippuen seuraavien alkuperäisten suurennuslasi- tai muiden
+helppokäyttötoimintojen komentojen tulokset puhutaan tätä lisäosaa
+käytettäessä:
 
 * Käynnistä suurennuslasi: Win++ (numeroriviltä tai numeronäppäimistöltä)
 * Lopeta suurennuslasi: Win+Esc
@@ -173,8 +173,9 @@ configuration:
   poistettu viimeisimmistä Windows-versioista, kuten Windows 10 2004,
   vaikkei sitä ole dokumentoitu missään.
 * Siirrä suurennettua näkymää: Ctrl+Alt+Nuolinäppäimet
-* Toggle color filters: `Windows+Control+C` (provided you have enabled this
-  shortcut in [Windows Accessibility settings, Color Filters][9])
+* Ota värisuodattimet käyttöön tai poista ne käytöstä: `Win+Ctrl+C` (jos
+  olet ottanut tämän pikanäppäimen käyttöön Windowsin asetuksista kohdasta
+  [Helppokäyttötoiminnot -> Värisuodattimet][9])
 
 Tässä on lisäksi luettelo muista Suurennuslasin alkuperäisistä komennoista:
 
@@ -226,25 +227,25 @@ Alkuperäisiä suurennuslasikomentoja ei voi muuttaa.
 
 ## Muutosloki
 
-### Version 4.2
+### Versio 4.2
 
-* Magnifier or Color filtering commands will no longer fail if used for the
-  first time with this add-on running.
+* Suurennuslasin tai värisuodatuksen komennot toimivat nyt ensimmäisellä
+  käyttökerralla, kun tämä lisäosa on käynnissä.
 
-### Version 4.0
+### Versio 4.0
 
-* The filter enabled by the toggle color filter command
-  (`Windows+Control+C`) can now be reported; this toggle command should have
-  been previously enabled in Windows Accessibility settings.
-* Compatibility with NVDA 2025.1.
+* Pikanäppäimellä `Win+Ctrl+C` käyttöön otettavan värisuodattimen tila
+  voidaan nyt ilmoittaa. Tämä pikanäppäin on ensin otettava käyttöön
+  Windowsin helppokäyttötoimintojen asetuksista.
+* Yhteensopivuus NVDA 2025.1:n kanssa.
 
-### Version 3.7
+### Versio 3.7
 
-* Compatibility with NVDA 2024.1.
+* Yhteensopivuus NVDA 2024.1:n kanssa.
 
-### Version 3.6
+### Versio 3.6
 
-* Fixed erroneous compatibility range.
+* Korjattu virheellinen versioyhteensopivuus.
 
 ### Versio 3.5
 
@@ -339,4 +340,4 @@ https://github.com/CyrilleB79/winMag/releases/download/V3.2/winMag-3.2.nvda-addo
 https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8#event-132994
 
 [9]:
-https://support.microsoft.com/en-us/windows/make-windows-easier-to-see-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d
+https://support.microsoft.com/fi-fi/windows/helpota-windowsin-n%C3%A4kemist%C3%A4-c97c2b0d-cadb-93f0-5fd1-59ccfe19345d
